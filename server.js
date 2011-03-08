@@ -17,7 +17,7 @@ var server = http.createServer(function(request, response) {
 	request.setEncoding("utf8");
 	var req = url.parse(request.url);
 	var path = req.pathname.slice(1);
-	if(path === "" || path.pathname == "index.html") {
+	if(path === "" || path == "index.html") {
 		response.writeHead(200, {
 			"Cache-Control": "public; max-age=86400",
 			"Content-Type": "text/html; charset=UTF-8",
